@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap');
+
 :root {
 /* Theme 1 */
 
@@ -23,4 +25,9 @@
 --very-dark-grayish-blue: hsl(221, 14%, 31%);
 --white: hsl(0, 0%, 100%);
 
+}
+
+* {
+  font-family: 'League Spartan', sans-serif;
+  font-weight: 700;
 }
