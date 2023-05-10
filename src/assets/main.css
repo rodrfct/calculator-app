@@ -11,8 +11,8 @@
 
   /* Keys */
 
---key-background: hsl(225, 21%, 49%);
---key-shadow: hsl(224, 28%, 35%);
+--action-key-background: hsl(225, 21%, 49%);
+--action-key-shadow: hsl(224, 28%, 35%);
 
 --red /*(key background, toggle)*/: hsl(6, 63%, 50%);
 --dark-red /*(key shadow)*/: hsl(6, 70%, 34%);
