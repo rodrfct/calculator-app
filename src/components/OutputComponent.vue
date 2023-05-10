@@ -7,7 +7,7 @@ const store = useCalculationStore()
 <template>
     <div class="output">
         <span class="result">
-            {{ store.pool }}
+            {{ store.output }}
         </span>
     </div>
 </template>

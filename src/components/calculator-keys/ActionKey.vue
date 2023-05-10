@@ -1,20 +1,31 @@
 <script setup>
-import {useCalculate} from '../../composables/calculate';
-import {useDelete} from '../../composables/delete';
-import {useReset} from '../../composables/reset';
+import {useCalculationStore} from '../../stores/calculation';
 
-defineProps({
+const store = useCalculationStore()
+
+const props = defineProps({
     value: {
         type: String,
         required: true
     }
 })
 
+
+function action() {}
+
+if (props.value === "DEL") {
+    action = store.del
+} else if (props.value === "RESET") {
+    action = store.$reset
+} else if (props.value === "=")  {
+    action = store.calculate 
+}
+
 </script>
 
 
 <template>
-    <button class="calculator-key action-key">{{ value }}</button>
+    <button @click="action" class="calculator-key action-key">{{ value }}</button>
 </template>
 
 <style scoped></style>

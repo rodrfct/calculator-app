@@ -1,4 +1,7 @@
 <script setup>
+import { useCalculationStore } from '../../stores/calculation';
+
+const store = useCalculationStore()
 
 defineProps({
     value: {
@@ -10,7 +13,7 @@ defineProps({
 </script>
 
 <template>
-    <button class="calculator-key op-key">{{ value }}</button>
+    <button @click="store.operationString+=value" class="calculator-key op-key">{{ value }}</button>
 </template>
 
 <style scoped></style>
