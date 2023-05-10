@@ -50,7 +50,7 @@ let btype = {
     background-color: var(--light-grayish-orange);
     box-shadow: 0 3px var(--grayish-orange);
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     
     font-size: 32px;
     color: var(--very-dark-grayish-blue)

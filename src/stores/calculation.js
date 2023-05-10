@@ -19,13 +19,16 @@ export const useCalculationStore = defineStore('calculation', () => {
   })
 
   function del() {
-    console.log("Deleting")
     operationString.value = operationString.value.slice(0, -1)
   }
 
   function calculate() {
-    console.log("Calculating")
-    let expr = `${pool.value} ${operationString.value}`
+    let expr
+    if (pool.value) {
+      expr = `${pool.value} ${operationString.value.replace("x", "*")}`
+    } else {
+      expr = `${pool.value} + ${operationString.value.replace("x", "*")}`
+    }
     try {
       pool.value = eval(expr);
       operationString.value = ""
@@ -35,7 +38,6 @@ export const useCalculationStore = defineStore('calculation', () => {
   }
 
   function $reset() {
-    console.log("Reseting")
     pool.value = 0;
 
     operationString.value = ""
