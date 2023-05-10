@@ -1,15 +1,8 @@
 <script setup>
-import { useCalculationStore } from '../stores/calculation';
 import NumberKey from './calculator-keys/NumberKey.vue';
 import ActionKey from './calculator-keys/ActionKey.vue';
 import OperatorKey from './calculator-keys/OperatorKey.vue';
 
-const store = useCalculationStore()
-
-let btype = {
-    type: "Action",
-    value: "Reset"
-}
 </script>
 
 <template>
@@ -55,11 +48,6 @@ let btype = {
     font-size: 32px;
     color: var(--very-dark-grayish-blue)
 }
-
-/* .number-key {
-    grid-column: 1/4;
-    grid-row: 1/5;
-} */
 
 .action-key {
     font-size: 1.2rem;

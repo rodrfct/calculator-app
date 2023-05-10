@@ -15,5 +15,3 @@ defineProps({
 <template>
     <button @click="store.operationString+=value" class="calculator-key op-key">{{ value }}</button>
 </template>
-
-<style scoped></style>
