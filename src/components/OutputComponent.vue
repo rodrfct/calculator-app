@@ -14,12 +14,14 @@ const store = useCalculationStore()
 
 <style scoped>
 .output {
-    padding: 5%;
+    padding: 8% 5%;
     border-radius: 10px;
     font-size: 3rem;
     background-color: var(--screen-background);
+
     color: var(--white);
     text-align: right;
+    overflow-y: scroll;
 }
 
 </style>

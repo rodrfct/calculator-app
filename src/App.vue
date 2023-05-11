@@ -24,6 +24,6 @@ import InputComponent from './components/InputComponent.vue';
 }
 
 .wrapper > * {
-  margin: 4% 0;
+  margin: 5% 0;
 }
 </style>

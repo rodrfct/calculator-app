@@ -29,11 +29,13 @@ import OperatorKey from './calculator-keys/OperatorKey.vue';
 .input {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 5%;
+    grid-template-rows: repeat(5, 1fr);
+    column-gap: 5%;
+    row-gap: 8%;
 
     /*Added more bottom padding to prevent overflow
     a bit of a hack tbh */
-    padding: 5% 5% 15% 5%;
+    padding: 6% 6% 26% 6%;
     border-radius: 10px;
     background-color: var(--toggle-and-keypad-background);
 }
