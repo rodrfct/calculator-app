@@ -33,22 +33,28 @@ p {
 span {
     grid-column: 3;
     place-self: center;
+
+    font-size: .8rem;
+    margin-left: 50%;
 }
 
+form {
+    margin-top: 20%;
+}
 
 fieldset {
     margin: 0;
     border: none;
     border-radius: 20px;
-    padding: 4px;
+    padding: 4px 0;
 
     background-color: var(--toggle-and-keypad-background);
 }
 
-.labels {
-    padding: 4px;
-    display: flex;
-    justify-content: space-between;
+.labels, fieldset {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    place-items: center;
 }
 
 label, input {
@@ -62,9 +68,6 @@ input {
 
     width: var(--size);
     height: var(--size);
-
-    /*This is probably totally unresponsive */
-    transform: translate(0, 15%);
 }
 
 input:checked {
