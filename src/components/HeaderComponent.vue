@@ -35,7 +35,6 @@ span {
     place-self: center;
 
     font-size: .8rem;
-    margin-left: 50%;
 }
 
 form {

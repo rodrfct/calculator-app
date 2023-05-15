@@ -30,18 +30,17 @@ import OperatorKey from './calculator-keys/OperatorKey.vue';
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(5, 1fr);
-    column-gap: 5%;
-    row-gap: 8%;
+    /*Setting a percenteage for the row-gap causes overflow, but a fixed size doesn't,
+    I took a long time to realize. The reason I don't know but column-gap seems fine */
+    gap: 1em 5%;
 
-    /*Added more bottom padding to prevent overflow
-    a bit of a hack tbh */
-    padding: 6% 6% 26% 6%;
+    padding: 5%;
     border-radius: 10px;
     background-color: var(--toggle-and-keypad-background);
 }
 
 .calculator-key {
-    padding: 0.6rem 1.2rem;
+    padding: .2em 0;
     background-color: var(--light-grayish-orange);
     box-shadow: 0 3px var(--grayish-orange);
     border: none;

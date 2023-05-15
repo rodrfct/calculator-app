@@ -16,14 +16,19 @@ import InputComponent from './components/InputComponent.vue';
 
 <style scoped>
 .wrapper {
-    width: 400px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .wrapper > * {
   margin: 5% 0;
+}
+
+@media screen and (width > 600px) {
+  .wrapper {
+    min-width: 40%
+  }
 }
 </style>
