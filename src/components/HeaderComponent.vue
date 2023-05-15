@@ -4,7 +4,7 @@
 
         <span>THEME</span>
 
-        <form>
+        <form id="theme-switch">
             <div class="labels">
                 <label for="theme-1">1</label>
                 <label for="theme-2">2</label>
@@ -21,27 +21,18 @@
 
 <style scoped>
 header {
-    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     color: var(--white);
 }
 
 p {
-    display: inline;
     font-size: 1.6em;
 }
 
-/*This is a hack, I am struggling to lay the items properly */
 span {
-    position: absolute;
-    right: 27%;
-    bottom: 30%;
-    font-size: .7em;
-}
-
-form {
-    position: absolute;
-    right: 5%;
-    bottom: 0;
+    grid-column: 3;
+    place-self: center;
 }
 
 
