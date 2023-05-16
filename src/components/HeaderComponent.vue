@@ -1,3 +1,24 @@
+<script setup>
+import {ref, watch} from 'vue';
+
+const selectedTheme = ref("")
+
+function retrieveTheme() {
+    try {
+        selectedTheme.value = localStorage.getItem("theme")
+    } catch (error) {
+        return
+    }
+}
+
+retrieveTheme()
+
+watch(selectedTheme, async (newValue, oldValue) => {
+    localStorage.setItem("theme", newValue)
+})
+
+</script>
+
 <template>
     <header>
         <p>calc</p>
@@ -11,9 +32,9 @@
                 <label for="theme-3">3</label>
             </div>
             <fieldset>
-                <input type="radio" name="theme" id="theme-1">
-                <input type="radio" name="theme" id="theme-2">
-                <input type="radio" name="theme" id="theme-3">
+                <input v-model="selectedTheme" type="radio" name="theme" id="theme-1" value="1">
+                <input v-model="selectedTheme" type="radio" name="theme" id="theme-2" value="2">
+                <input v-model="selectedTheme" type="radio" name="theme" id="theme-3" value="3">
             </fieldset>
         </form>
     </header>
