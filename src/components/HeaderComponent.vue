@@ -23,7 +23,7 @@
 header {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    color: var(--white);
+    color: var(--text-color);
 }
 
 p {
@@ -32,13 +32,13 @@ p {
 
 span {
     grid-column: 3;
-    place-self: center;
+    place-self: center end;
 
     font-size: .8rem;
 }
 
 form {
-    margin-top: 20%;
+    place-self: center;
 }
 
 fieldset {
@@ -70,11 +70,12 @@ input {
 }
 
 input:checked {
-    background-color: var(--red);
+    background-color: var(--eq-key-background);
 }
 
 input:hover {
     filter: brightness(150%);
+    cursor: pointer;
 }
 
 </style>

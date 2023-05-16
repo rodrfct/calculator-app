@@ -1,13 +1,18 @@
 <script setup>
+import { computed } from 'vue';
 import { useCalculationStore } from '../stores/calculation';
 
 const store = useCalculationStore()
+
+const toComma = computed(() => {
+    return store.output.replace(".", ",")
+})
 </script>
 
 <template>
     <div class="output">
         <span class="result">
-            {{ store.output }}
+            {{ toComma }}
         </span>
     </div>
 </template>
@@ -19,7 +24,7 @@ const store = useCalculationStore()
     font-size: 3rem;
     background-color: var(--screen-background);
 
-    color: var(--white);
+    color: var(--text-color);
     text-align: right;
     overflow-x: auto;
 }

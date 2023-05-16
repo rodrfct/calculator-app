@@ -41,28 +41,35 @@ import OperatorKey from './calculator-keys/OperatorKey.vue';
 
 .calculator-key {
     padding: .2em 0;
-    background-color: var(--light-grayish-orange);
-    box-shadow: 0 3px var(--grayish-orange);
+    background-color: var(--numkey-background);
+    box-shadow: 0 3px var(--numkey-shadow);
     border: none;
     border-radius: 8px;
     
     font-size: 32px;
-    color: var(--very-dark-grayish-blue);
+    color: var(--numkey-text-color);
 
     transition: filter .25s ease;
 }
 
 .calculator-key:hover {
     filter: brightness(150%);
+    cursor: pointer;
 }
 
 .action-key {
     font-size: 1.2rem;
     background-color: var(--action-key-background);
     box-shadow: 0 3px var(--action-key-shadow);
-    color: var(--white);
+    color: var(--action-key-color, white);
 }
 
+/*For some reason `--action-key-color` is not read only in theme 1
+I have no clue why, but I added the `white` fallback as a workaround */
+
+#equal-btn {
+    color: var(--eq-key-color, white);
+}
 
 /* Positioning buttons */
 #delete-btn {
@@ -101,8 +108,8 @@ import OperatorKey from './calculator-keys/OperatorKey.vue';
 
 #equal-btn{
     grid-column: 3 / 5;
-    background-color: var(--red);
-    box-shadow: 0 3px var(--dark-red);
+    background-color: var(--eq-key-background);
+    box-shadow: 0 3px var(--eq-key-shadow);
 }
 
 </style>
