@@ -47,7 +47,11 @@ import OperatorKey from './calculator-keys/OperatorKey.vue';
     border-radius: 8px;
     
     font-size: 32px;
-    color: var(--very-dark-grayish-blue)
+    color: var(--very-dark-grayish-blue);
+}
+
+.calculator-key:hover {
+    filter: brightness(150%);
 }
 
 .action-key {

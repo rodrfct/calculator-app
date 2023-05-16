@@ -73,4 +73,8 @@ input:checked {
     background-color: var(--red);
 }
 
+input:hover {
+    filter: brightness(150%);
+}
+
 </style>
