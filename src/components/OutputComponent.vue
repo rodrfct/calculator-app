@@ -21,7 +21,7 @@ const store = useCalculationStore()
 
     color: var(--white);
     text-align: right;
-    overflow-y: scroll;
+    overflow-x: auto;
 }
 
 </style>
