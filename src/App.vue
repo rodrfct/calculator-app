@@ -28,7 +28,8 @@ import InputComponent from './components/InputComponent.vue';
 
 @media screen and (width > 600px) {
   .wrapper {
-    min-width: 40%
+    min-width: 25%;
+    max-width: 50%;
   }
 }
 </style>
