@@ -12,9 +12,9 @@ export const useCalculationStore = defineStore('calculation', () => {
     if (err.value) {
       return err.value
     } else if (operationString.value) {
-      return operationString.value
+      return operationString.value.replace(".", ",")
     } else {
-      return pool.value
+      return pool.value.toString().replace(".", ",")
     }
   })
 

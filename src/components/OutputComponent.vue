@@ -1,18 +1,13 @@
 <script setup>
-import { computed } from 'vue';
 import { useCalculationStore } from '../stores/calculation';
 
 const store = useCalculationStore()
-
-const toComma = computed(() => {
-    return store.output.replace(".", ",")
-})
 </script>
 
 <template>
     <div class="output">
         <span class="result">
-            {{ toComma }}
+            {{ store.output }}
         </span>
     </div>
 </template>
