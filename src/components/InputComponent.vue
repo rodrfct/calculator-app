@@ -48,6 +48,8 @@ import OperatorKey from './calculator-keys/OperatorKey.vue';
     
     font-size: 32px;
     color: var(--very-dark-grayish-blue);
+
+    transition: filter .25s ease;
 }
 
 .calculator-key:hover {
