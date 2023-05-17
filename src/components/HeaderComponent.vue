@@ -13,6 +13,7 @@ function retrieveTheme() {
 
 retrieveTheme()
 
+// When the selected theme changes, save the selection
 watch(selectedTheme, async (newValue, oldValue) => {
     localStorage.setItem("theme", newValue)
 })

@@ -8,8 +8,8 @@ import OperatorKey from './calculator-keys/OperatorKey.vue';
 <template>
     <div class="input">
         
-        <NumberKey v-for="(index) in 9" :value="index" class="number-key" />
-        <NumberKey :value="0" class="number-key" />
+        <NumberKey v-for="(index) in 9" :value="index" />
+        <NumberKey :value="0" />
 
         <ActionKey :value="'DEL'" id="delete-btn" />
 

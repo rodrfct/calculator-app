@@ -13,6 +13,7 @@ const props = defineProps({
 
 function action() {}
 
+// Set the (store-)action depending on the value
 if (props.value === "DEL") {
     action = store.del
 } else if (props.value === "RESET") {
@@ -23,9 +24,6 @@ if (props.value === "DEL") {
 
 </script>
 
-
 <template>
     <button @click="action" class="calculator-key action-key">{{ value }}</button>
 </template>
-
-<style scoped></style>

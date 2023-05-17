@@ -13,5 +13,5 @@ defineProps({
 </script>
 
 <template>
-    <button @click="store.operationString+=`${value}`" class="calculator-key numkey">{{ value }}</button>
+    <button @click="store.operationString+=value" class="calculator-key numkey">{{ value }}</button>
 </template>
