@@ -27,7 +27,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [My Solution]()
+- Solution URL: [My Solution](https://www.frontendmentor.io/solutions/calculator-app-with-vue-and-pinia-8BPhG6DN26)
 - Live Site URL: [My Live Site](https://rodrfct.github.io/calculator-app/)
 
 ## My process
