@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap');
 
-root:has(#theme-1:checked) {
+:root:has(#theme-1:checked) {
   /* Theme 1 */
   
     /* Backgrounds */
@@ -91,7 +91,7 @@ root:has(#theme-1:checked) {
   
     /* Backgrounds */
   
-    --main-background: hsl(0, 0%, 90%) !important;
+    --main-background: hsl(0, 0%, 90%);
     --toggle-and-keypad-background: hsl(0, 5%, 81%);
     --screen-background: hsl(0, 0%, 93%);
   
