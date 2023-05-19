@@ -8,9 +8,11 @@ import InputComponent from './components/InputComponent.vue';
   <div class="wrapper">
     <HeaderComponent />
 
-    <OutputComponent />
+    <main>
+      <OutputComponent />
 
-    <InputComponent />
+      <InputComponent />
+    </main>
   </div>
 </template>
 

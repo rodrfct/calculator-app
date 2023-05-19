@@ -22,11 +22,11 @@ watch(selectedTheme, async (newValue, oldValue) => {
 
 <template>
     <header>
-        <p>calc</p>
+        <h1>calc</h1>
 
-        <span>THEME</span>
+        <span aria-hidden="true" >THEME</span>
 
-        <form id="theme-switch">
+        <form id="theme-switch" aria-hidden="true">
             <div class="labels">
                 <label for="theme-1">1</label>
                 <label for="theme-2">2</label>
@@ -46,10 +46,6 @@ header {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     color: var(--text-color);
-}
-
-p {
-    font-size: 1.6em;
 }
 
 span {
