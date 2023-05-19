@@ -33,9 +33,9 @@ watch(selectedTheme, async (newValue, oldValue) => {
                 <label for="theme-3">3</label>
             </div>
             <fieldset>
-                <input v-model="selectedTheme" type="radio" name="theme" id="theme-1" value="1">
-                <input v-model="selectedTheme" type="radio" name="theme" id="theme-2" value="2">
-                <input v-model="selectedTheme" type="radio" name="theme" id="theme-3" value="3">
+                <input v-model="selectedTheme" type="radio" name="theme" id="theme-1" value="1" tabindex="-1">
+                <input v-model="selectedTheme" type="radio" name="theme" id="theme-2" value="2" tabindex="-1">
+                <input v-model="selectedTheme" type="radio" name="theme" id="theme-3" value="3" tabindex="-1">
             </fieldset>
         </form>
     </header>
