@@ -24,7 +24,7 @@ import InputComponent from './components/InputComponent.vue';
   transform: translate(-50%, -50%);
 }
 
-.wrapper > * {
+.wrapper > *, main > * {
   margin: 5% 0;
 }
 
