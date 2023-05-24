@@ -6,7 +6,10 @@ const store = useCalculationStore()
 const props = defineProps({
     value: {
         type: String,
-        required: true
+        required: true,
+
+        validator: (value) => {
+              return ["DEL", "RESET", "="].includes(value)
     }
 })
 
