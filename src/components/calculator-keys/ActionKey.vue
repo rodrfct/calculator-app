@@ -1,7 +1,4 @@
 <script setup>
-import {useCalculationStore} from '../../stores/calculation';
-
-const store = useCalculationStore()
 
 const props = defineProps({
     value: {
@@ -11,20 +8,12 @@ const props = defineProps({
         validator: (value) => {
               return ["DEL", "RESET", "="].includes(value)
         }
+    },
+    action: {
+        type: Function,
+        required: true
     }
 })
-
-
-function action() {}
-
-// Set the (store-)action depending on the value
-if (props.value === "DEL") {
-    action = store.del
-} else if (props.value === "RESET") {
-    action = store.$reset
-} else if (props.value === "=")  {
-    action = store.calculate 
-}
 
 </script>
 

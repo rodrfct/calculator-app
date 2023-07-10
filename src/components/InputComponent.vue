@@ -2,6 +2,9 @@
 import NumberKey from './calculator-keys/NumberKey.vue';
 import ActionKey from './calculator-keys/ActionKey.vue';
 import OperatorKey from './calculator-keys/OperatorKey.vue';
+import { useCalculationStore } from '../stores/calculation';
+
+const { del, calculate, $reset } = useCalculationStore()
 
 </script>
 
@@ -11,7 +14,7 @@ import OperatorKey from './calculator-keys/OperatorKey.vue';
         <NumberKey v-for="(index) in 9" :value="index" />
         <NumberKey :value="0" />
 
-        <ActionKey :value="'DEL'" id="delete-btn" />
+        <ActionKey :value="'DEL'" :action="del" id="delete-btn" />
 
         <OperatorKey :value="'+'" id="plus-btn" />
         <OperatorKey :value="'-'" id="minus-btn" />
@@ -19,8 +22,8 @@ import OperatorKey from './calculator-keys/OperatorKey.vue';
         <OperatorKey :value="'/'" id="division-btn" />
         <OperatorKey :value="'.'" id="point-btn" />
 
-        <ActionKey :value="'RESET'" id="reset-btn" />
-        <ActionKey :value="'='" id="equal-btn" />
+        <ActionKey :value="'RESET'" :action="$reset" id="reset-btn" />
+        <ActionKey :value="'='" :action="calculate" id="equal-btn" />
         
     </div>
 </template>
