@@ -10,6 +10,7 @@ const props = defineProps({
 
         validator: (value) => {
               return ["DEL", "RESET", "="].includes(value)
+        }
     }
 })
 
