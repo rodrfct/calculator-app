@@ -11,7 +11,7 @@ const { del, calculate, $reset } = useCalculationStore()
 <template>
     <div class="input">
         
-        <NumberKey v-for="(index) in 9" :value="index" />
+        <NumberKey v-for="(index) in 9" :value="index" :data-value="index" />
         <NumberKey :value="0" />
 
         <ActionKey :value="'DEL'" :action="del" id="delete-btn" />
